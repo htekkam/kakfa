@@ -14,7 +14,7 @@ public class KafkaConfig {
     public NewTopic topic(){
         return TopicBuilder
                 .name(CAB_LOCATION)
-                .partitions(2)
+                .partitions(3)
                 .build();
     }
 }
