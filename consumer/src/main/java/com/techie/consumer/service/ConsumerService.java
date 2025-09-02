@@ -10,8 +10,7 @@ public class ConsumerService {
     public static final String CONSUMER_GROUP = "consumer-group";
     public static int messageCounter=0;
 
-    @KafkaListener(topics = CAB_LOCATION,groupId = CONSUMER_GROUP,
-                   containerFactory = "kafkaListenerContainerFactory")
+    @KafkaListener(topics = CAB_LOCATION,groupId = CONSUMER_GROUP,concurrency = "2")
     public void cabLocation(String location){
         System.out.println("Thread::"+ Thread.currentThread().getName()+" ,"+location);
     }
