@@ -21,7 +21,7 @@ public class ProducerController {
     @PutMapping
     public ResponseEntity updateLocation() throws InterruptedException {
 
-        int range = 25;
+        int range = 105;
         while(range >0){
             //System.out.println(Math.random()+" , "+Math.random());
             producerService.updateLocation(Math.random()+" , "+Math.random());
